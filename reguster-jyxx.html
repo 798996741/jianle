@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/mui.poppicker.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <style>
+
+    </style>
+    <title></title>
+    <script>
+        $(function () {
+            $(".form-register").click(function () {
+                window.location.href = 'jl-clsc.html'
+            });
+        })
+    </script>
+</head>
+
+<body>
+<div class="bg bg-gray">
+    <header class="site-tit-header">
+        <div class="site-tit-word">●请填写您的就业/创业信息●</div>
+    </header>
+    <main class="page-main">
+        <form class="page-form">
+            <div class="form-item">
+                <label class="form-label">身份证号</label>
+                <div class="form-content">
+                    <div class="form-input">
+                        <input type="text" autocomplete="off" class="form-input__inner" placeholder="请输入">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名&nbsp;&nbsp;</label>
+                <div class="form-content">
+                    <div class="form-input">
+                        <input type="text" autocomplete="off" class="form-input__inner" placeholder="请输入">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别&nbsp;&nbsp;</label>
+                <div class="form-content selectPicker">
+                    <div class="radio-sex">
+                        <input type="radio" name="partyMember" value="yes" checked />
+                        <label></label>
+                        男&nbsp;
+                    </div>
+                    <div class="radio-sex">
+                        <input type="radio" name="partyMember" value="no" />
+                        <label></label>
+                        女
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">出生日期</label>
+                <div class="form-content form-date">
+                    <div class="btn date selectPicker" id="dateResult" data-options='{"type":"date"}'><div class="com-color">请选择毕业时间</div>
+                        <div class="down-icon"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">户籍性质</label>
+                <div class="form-content selectPicker">
+                    <div class="radio-sex">
+                        <input type="radio" name="hj" value="yes" checked />
+                        <label></label>
+                        农业&nbsp;
+                    </div>
+                    <div class="radio-sex">
+                        <input type="radio" name="hj" value="no" />
+                        <label></label>
+                        非农业
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">联系电话</label>
+                <div class="form-content">
+                    <div class="form-input">
+                        <input type="number" autocomplete="off" class="form-input__inner" placeholder="请输入">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">文化程度</label>
+                <div class="form-content form-date">
+                    <div id='showeduPicker' class="selectPicker"><div class="com-color">请选择</div>
+                        <div class="down-icon"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">职业技能</label>
+                <div class="form-content">
+                    <div class="form-input">
+                        <input type="text" autocomplete="off" class="form-input__inner" placeholder="请输入">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">登记对象</label>
+                <div class="form-content">
+                    <div class="form-input">
+                        <input type="text" autocomplete="off" class="form-input__inner" placeholder="请输入">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">就业时间</label>
+                <div class="form-content form-date">
+                    <div class="btn-jy date selectPicker" id="dateResult-jy" data-options='{"type":"date"}'><div class="com-color">请选择毕业时间</div>
+                        <div class="down-icon"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">合同期限</label>
+                <div class="form-content">
+                    <div class="form-input">
+                        <input type="number" autocomplete="off" class="form-input__inner" placeholder="请输入">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">户籍所在地</label>
+                <div class="form-content">
+                    <div class="form-input">
+                        <input type="number" autocomplete="off" class="form-input__inner" placeholder="请输入">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label" style="width: 5rem;">就业创业证号</label>
+                <div class="form-content">
+                    <div class="form-input">
+                        <input type="number" autocomplete="off" class="form-input__inner" placeholder="若无可不填">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label" style="width: 7.5rem;">技术等级（或支撑）</label>
+                <div class="form-content">
+                    <div class="form-input">
+                        <input type="number" autocomplete="off" class="form-input__inner" placeholder="请输入">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label" style="width: 5rem;">用人单位类型</label>
+                <div class="form-content form-date">
+                    <div id='showzsPicker' class="selectPicker"><div class="com-color">请选择</div>
+                        <div class="down-icon"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label" style="width: 5rem;">其他就业类型</label>
+                <div class="form-content form-date">
+                    <div id='showlxPicker' class="selectPicker"><div class="com-color">请选择</div>
+                        <div class="down-icon"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">现常住地址</label>
+                <div class="form-content">
+                    <div class="form-input">
+                        <input type="number" autocomplete="off" class="form-input__inner" placeholder="请输入">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label" style="width: 5rem;">迁入现住地时间</label>
+                <div class="form-content form-date">
+                    <div class="btn-qr date selectPicker" id="dateResult-qr" data-options='{"type":"date"}'><div class="com-color">请选择毕业时间</div>
+                        <div class="down-icon"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-item-both">
+                <div class="form-item-half" style="width: 100%;">
+                    <label class="form-label">材料上传</label>
+                    <div class="form-content">
+                        <div class="photo-content to-bd">
+                            <img src="images/photo-btn.png"/>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <div class="form-register">
+                    以确认无误
+                </div>
+            </div>
+        </form>
+    </main>
+</div>
+<script src="js/mui.min.js"></script>
+<script src="js/mui.picker.min.js"></script>
+<script src="js/mui.poppicker.js"></script>
+<script src="js/city.data.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    (function ($) {
+        $.init();
+        var btns = $('.btn');
+        var dateResult = document.getElementById('dateResult');
+        btns.each(function (i, btn) {
+            btn.addEventListener('tap', function () {
+                var _self = this;
+                if (_self.picker) {
+                    _self.picker.show(function (rs) {
+                        console.log(rs.text);
+                        dateResult.innerText = rs.text;
+                        _self.picker.dispose();
+                        _self.picker = null;
+                    });
+                } else {
+                    var optionsJson = this.getAttribute('data-options') || '{}';
+                    var options = JSON.parse(optionsJson);
+                    _self.picker = new $.DtPicker(options);
+                    _self.picker.show(function (rs) {
+                        dateResult.innerText = rs.text;
+                        _self.picker.dispose();
+                        _self.picker = null;
+                    });
+                }
+
+            }, false);
+        });
+
+        var btns_jy = $('.btn-jy');
+        var dateResult_jy = document.getElementById('dateResult-jy');
+        btns_jy.each(function (i, btn) {
+            btn.addEventListener('tap', function () {
+                var _self = this;
+                if (_self.picker) {
+                    _self.picker.show(function (rs) {
+                        console.log(rs.text);
+                        dateResult_jy.innerText = rs.text;
+                        _self.picker.dispose();
+                        _self.picker = null;
+                    });
+                } else {
+                    var optionsJson = this.getAttribute('data-options') || '{}';
+                    var options = JSON.parse(optionsJson);
+                    _self.picker = new $.DtPicker(options);
+                    _self.picker.show(function (rs) {
+                        dateResult_jy.innerText = rs.text;
+                        _self.picker.dispose();
+                        _self.picker = null;
+                    });
+                }
+
+            }, false);
+        });
+
+        var btns_qr = $('.btn-qr');
+        var dateResult_qr = document.getElementById('dateResult-qr');
+        btns_qr.each(function (i, btn) {
+            btn.addEventListener('tap', function () {
+                var _self = this;
+                if (_self.picker) {
+                    _self.picker.show(function (rs) {
+                        console.log(rs.text);
+                        dateResult_qr.innerText = rs.text;
+                        _self.picker.dispose();
+                        _self.picker = null;
+                    });
+                } else {
+                    var optionsJson = this.getAttribute('data-options') || '{}';
+                    var options = JSON.parse(optionsJson);
+                    _self.picker = new $.DtPicker(options);
+                    _self.picker.show(function (rs) {
+                        dateResult_qr.innerText = rs.text;
+                        _self.picker.dispose();
+                        _self.picker = null;
+                    });
+                }
+
+            }, false);
+        });
+
+        var _getParam = function (obj, param) {
+            return obj[param] || '';
+        };
+        // 文化程度
+        var eduPicker = new $.PopPicker();
+        eduPicker.setData([{
+            value: '1',
+            text: '博士'
+        }, {
+            value: '2',
+            text: '硕士'
+        }, {
+            value: '3',
+            text: '本科'
+        }, {
+            value: '4',
+            text: '大专'
+        }, {
+            value: '5',
+            text: '中专'
+        }, {
+            value: '6',
+            text: '其他'
+        }]);
+        var showeduPickerButton = document.getElementById('showeduPicker');
+        showeduPickerButton.addEventListener('tap', function (event) {
+            eduPicker.show(function (items) {
+                console.log(items[0])
+                showeduPickerButton.innerText = _getParam(items[0], 'text');
+                //返回 false 可以阻止选择框的关闭
+                //return false;
+            });
+        }, false);
+
+        // 用人单位类型
+        var zsPicker = new $.PopPicker();
+        zsPicker.setData([{
+            value: '1',
+            text: '社会团体'
+        }, {
+            value: '2',
+            text: '社会团体'
+        }, {
+            value: '3',
+            text: '社会团体'
+        }]);
+        var showzsPickerButton = document.getElementById('showzsPicker');
+        showzsPickerButton.addEventListener('tap', function (event) {
+            zsPicker.show(function (items) {
+                console.log(items[0])
+                showzsPickerButton.innerText = _getParam(items[0], 'text');
+                //返回 false 可以阻止选择框的关闭
+                //return false;
+            });
+        }, false);
+
+        // 其他就业类型
+        var lxPicker = new $.PopPicker();
+        lxPicker.setData([{
+            value: '1',
+            text: '社会团体'
+        }, {
+            value: '2',
+            text: '社会团体'
+        }, {
+            value: '3',
+            text: '社会团体'
+        }]);
+        var showlxPickerButton = document.getElementById('showlxPicker');
+        showlxPickerButton.addEventListener('tap', function (event) {
+            lxPicker.show(function (items) {
+                console.log(items[0])
+                showlxPickerButton.innerText = _getParam(items[0], 'text');
+                //返回 false 可以阻止选择框的关闭
+                //return false;
+            });
+        }, false);
+
+    })(mui);
+</script>
+</body>
+
+</html>

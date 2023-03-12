@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/mui.poppicker.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+
+    <title></title>
+</head>
+
+<body>
+    <div class="bg bg-gray">
+        <header class="site-tit-header">
+			<div class="site-tit-word">●上传报到证照片●</div>
+		</header>
+        <main class="page-main">
+			<div class="photo-bg">
+				<div class="photo-word">
+					1. 请上传本人报到证的正反图片<br>
+					2. 拍照时请确保毕业证书边框完整、图像文字清晰、光线均匀
+				</div>
+				<div class="upload-photo">
+					<div class="upload-img">
+						<img src=""/>
+					</div>
+					<div class="upload-block">
+						<a href="javascript:;" class="a-upload upload-plus">
+							<input type="file" name="file1" id="file1">+
+						</a>
+						<div class="upload-tit">报到证正面</div>
+					</div>
+					
+				</div>
+				<div class="upload-photo">
+					<div class="upload-img">
+						<img src=""/>
+					</div>
+					<div class="upload-block">
+						<a href="javascript:;" class="a-upload upload-plus">
+							<input type="file" name="file1" id="file1">+
+						</a>
+						<div class="upload-tit">报到证反面</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="form-register">
+			        确认提交
+			    </div>
+			</div>
+		</main>
+    </div>
+    <script src="js/mui.min.js"></script>
+	<script>
+		$(function () {
+			$(".upload-photo").click(function () {
+				// mui.alert("您好，请先拍照上传后，再提交信息，谢谢!");
+			})
+		});
+	</script>
+	
+</body>
+
+</html>

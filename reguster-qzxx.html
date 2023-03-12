@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/mui.poppicker.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <style>
+
+    </style>
+    <title></title>
+    <script>
+        $(function () {
+            $(".form-register").click(function () {
+                window.location.href = 'jl-work.html'
+            });
+        })
+    </script>
+</head>
+
+<body>
+<div class="bg bg-gray">
+    <header class="site-tit-header">
+        <div class="site-tit-word">●请填写您的求职信息●</div>
+    </header>
+    <main class="page-main">
+        <form class="page-form">
+            <div class="form-item">
+                <label class="form-label">身份证号</label>
+                <div class="form-content">
+                    <div class="form-input">
+                        <input type="text" autocomplete="off" class="form-input__inner" placeholder="请输入">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名&nbsp;&nbsp;</label>
+                <div class="form-content">
+                    <div class="form-input">
+                        <input type="text" autocomplete="off" class="form-input__inner" placeholder="请输入">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别&nbsp;&nbsp;</label>
+                <div class="form-content selectPicker">
+                    <div class="radio-sex">
+                        <input type="radio" name="partyMember" value="yes" checked />
+                        <label></label>
+                        男&nbsp;
+                    </div>
+                    <div class="radio-sex">
+                        <input type="radio" name="partyMember" value="no" />
+                        <label></label>
+                        女
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">民&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;族&nbsp;&nbsp;</label>
+                <div class="form-content">
+                    <div class="form-input">
+                        <input type="text" autocomplete="off" class="form-input__inner" placeholder="请输入">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">户籍地址</label>
+                <div class="form-content">
+                    <div class="form-input">
+                        <input type="text" autocomplete="off" class="form-input__inner" placeholder="请输入户籍地址">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">联系电话</label>
+                <div class="form-content">
+                    <div class="form-input">
+                        <input type="number" autocomplete="off" class="form-input__inner" placeholder="请输入">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;历&nbsp;&nbsp;</label>
+                <div class="form-content form-date">
+                    <div id='showeduPicker' class="selectPicker"><div class="com-color">请选择学历</div>
+                        <div class="down-icon"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业&nbsp;&nbsp;</label>
+                <div class="form-content">
+                    <div class="form-input">
+                        <input type="number" autocomplete="off" class="form-input__inner" placeholder="请输入专业">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">就业状态</label>
+                <div class="form-content selectPicker">
+                    <div class="radio-sex">
+                        <input type="radio" name="partyMember" value="yes" checked />
+                        <label></label>
+                        就业&nbsp;
+                    </div>
+                    <div class="radio-sex">
+                        <input type="radio" name="partyMember" value="no" />
+                        <label></label>
+                        失业
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">意向岗位</label>
+                <div class="form-content">
+                    <div class="form-input">
+                        <input type="text" autocomplete="off" class="form-input__inner" placeholder="请输入意向岗位">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">期望薪资</label>
+                <div class="form-content">
+                    <div class="form-input">
+                        <input type="number" autocomplete="off" class="form-input__inner" placeholder="请输入期望薪资">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">工作地点</label>
+                <div class="form-content">
+                    <div class="form-input">
+                        <input type="number" autocomplete="off" class="form-input__inner" placeholder="请输入工作地点">
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="form-label">其&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;他&nbsp;&nbsp;</label>
+                <div class="form-content">
+                    <div class="form-input">
+                        <input type="number" autocomplete="off" class="form-input__inner" placeholder="请输入其他">
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div>
+                <div class="form-register">
+                    以确认无误
+                </div>
+            </div>
+        </form>
+    </main>
+</div>
+<script src="js/mui.min.js"></script>
+<script src="js/mui.picker.min.js"></script>
+<script src="js/mui.poppicker.js"></script>
+<script src="js/city.data.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    (function ($) {
+        $.init();
+        var btns = $('.btn');
+        var dateResult = document.getElementById('dateResult');
+        btns.each(function (i, btn) {
+            btn.addEventListener('tap', function () {
+                var _self = this;
+                if (_self.picker) {
+                    _self.picker.show(function (rs) {
+                        console.log(rs.text);
+                        dateResult.innerText = rs.text;
+                        _self.picker.dispose();
+                        _self.picker = null;
+                    });
+                } else {
+                    var optionsJson = this.getAttribute('data-options') || '{}';
+                    var options = JSON.parse(optionsJson);
+                    _self.picker = new $.DtPicker(options);
+                    _self.picker.show(function (rs) {
+                        dateResult.innerText = rs.text;
+                        _self.picker.dispose();
+                        _self.picker = null;
+                    });
+                }
+
+            }, false);
+        });
+        var _getParam = function (obj, param) {
+            return obj[param] || '';
+        };
+        // 学历
+        var eduPicker = new $.PopPicker();
+        eduPicker.setData([{
+            value: '1',
+            text: '博士'
+        }, {
+            value: '2',
+            text: '硕士'
+        }, {
+            value: '3',
+            text: '本科'
+        }, {
+            value: '4',
+            text: '大专'
+        }, {
+            value: '5',
+            text: '中专'
+        }, {
+            value: '6',
+            text: '其他'
+        }]);
+        var showeduPickerButton = document.getElementById('showeduPicker');
+        showeduPickerButton.addEventListener('tap', function (event) {
+            eduPicker.show(function (items) {
+                console.log(items[0])
+                showeduPickerButton.innerText = _getParam(items[0], 'text');
+                //返回 false 可以阻止选择框的关闭
+                //return false;
+            });
+        }, false);
+
+        // 证书等级
+        var zsPicker = new $.PopPicker();
+        zsPicker.setData([{
+            value: '1',
+            text: '一级'
+        }, {
+            value: '2',
+            text: '二级'
+        }, {
+            value: '3',
+            text: '三级'
+        }]);
+        var showeduPickerButton = document.getElementById('showzsPicker');
+        showeduPickerButton.addEventListener('tap', function (event) {
+            zsPicker.show(function (items) {
+                console.log(items[0])
+                showeduPickerButton.innerText = _getParam(items[0], 'text');
+                //返回 false 可以阻止选择框的关闭
+                //return false;
+            });
+        }, false);
+
+    })(mui);
+</script>
+</body>
+
+</html>

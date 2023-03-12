@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/mui.poppicker.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <title></title>
+    <style>
+        .mui-poppicker{
+            background-color:rgba(247,252,255,0.8)!important;
+        }
+
+        .mui-poppicker-body {
+            background-color:rgba(247,252,255,0.6)!important;
+            border-top:0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg  bgImg">
+		<div class="location-msg">
+			<img src="images/location.png"/>
+			请选择报到地区
+		</div>
+		<div class="location-input">
+			<div id='showCityPicker'>请选择您所在的地区
+				<div class="down-icon"></div>
+			</div>
+		</div>
+    </div>
+    <script src="js/mui.min.js"></script>
+    <script src="js/mui.picker.min.js"></script>
+    <script src="js/mui.poppicker.js"></script>
+    <script src="js/city.data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        (function ($) {
+            $.init();
+            var btns = $('.btn');
+            var dateResult = document.getElementById('dateResult');
+            btns.each(function (i, btn) {
+                btn.addEventListener('tap', function () {
+                    var _self = this;
+                    if (_self.picker) {
+                        _self.picker.show(function (rs) {
+                            console.log(rs.text);
+                            dateResult.innerText = rs.text;
+                            _self.picker.dispose();
+                            _self.picker = null;
+                        });
+                    } else {
+                        var optionsJson = this.getAttribute('data-options') || '{}';
+                        var options = JSON.parse(optionsJson);
+                        _self.picker = new $.DtPicker(options);
+                        _self.picker.show(function (rs) {
+                            dateResult.innerText = rs.text;
+                            _self.picker.dispose();
+                            _self.picker = null;
+                        });
+                    }
+
+                }, false);
+            });
+           
+			// 获取地区
+            var _getParam = function (obj, param) {
+                return obj[param] || '';
+            };
+            var cityPicker = new $.PopPicker({
+                layer: 3
+            });
+            cityPicker.setData(cityData3);
+            var showCityPickerButton = document.getElementById('showCityPicker');
+            showCityPickerButton.addEventListener('tap', function (event) {
+                cityPicker.show(function (items) {
+                    console.log(items);
+                    showCityPickerButton.innerText = _getParam(items[0], 'text') + " " + _getParam(
+                        items[1], 'text') + " " + _getParam(items[2], 'text');
+					console.log(showCityPickerButton.innerText)
+					if (showCityPickerButton.innerText == '福建省 三明市 将乐县') {
+						window.location.href = 'register.html'
+					} else {
+						window.location.href = 'noopen.html'
+					}
+                });
+            }, false);
+        })(mui);
+    </script>
+</body>
+
+</html>

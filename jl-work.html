@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <title></title>
+    <script>
+        $(function () {
+            $("#but-hq").click(function () {
+                window.location.href = 'jl-recommend.html'
+            });
+        })
+    </script>
+</head>
+
+<body>
+<div class="bg bgImg">
+    <div class="msg-img-a">
+        <img src="images/success.png" />
+    </div>
+    <div class="recommend-cont-a">
+        <div class="recommend-tit">
+            您的求职登记已完成！
+        </div>
+        <div class="recommend-intr">
+           还可以为您推荐【政策匹配】和【岗位匹配】的服务哦~您可以点击下方按钮，将为您提供相应的匹配服务
+        </div>
+        <div class="recommend-btns">
+            <div id="but-hq" class="recommend-btn recommend-first-btn">
+                我想获取政策
+            </div>
+            <div class="recommend-btn">
+                暂时不想了解
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
